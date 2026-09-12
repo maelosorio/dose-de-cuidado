@@ -1,4 +1,13 @@
+import { useNavigate } from 'react-router-dom'
+
 function Login() {
+  const navigate = useNavigate()
+
+  const handleLogin = (e) => {
+    e.preventDefault()
+    navigate('/dashboard')
+  }
+
   return (
     <div className="min-h-screen flex">
 
@@ -32,7 +41,7 @@ function Login() {
             Entre para gerenciar sua rotina de cuidados
           </p>
 
-          <form className="space-y-5">
+          <form className="space-y-5" onSubmit={handleLogin}>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 E-mail

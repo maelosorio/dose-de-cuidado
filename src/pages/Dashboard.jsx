@@ -1,8 +1,8 @@
+import { Link } from 'react-router-dom'
 import medicamentos from '../data/mockMedicamentos.json'
 import CardMedicamento from '../components/CardMedicamento'
 
 function Dashboard() {
-  // Contando quantos remédios têm cada status
   const pendentes = medicamentos.filter((m) => m.status === 'pendente').length
   const concluidos = medicamentos.filter((m) => m.status === 'concluido').length
   const totalCadastrados = medicamentos.length
@@ -14,12 +14,12 @@ function Dashboard() {
       <aside className="w-64 bg-blue-800 text-white flex flex-col p-6">
         <h2 className="text-xl font-bold mb-8">Dose de Cuidado</h2>
         <nav className="flex flex-col gap-4 text-blue-100">
-          <a href="#" className="text-white font-semibold border-l-4 border-white pl-2 -ml-2.5">
-            Agenda
-          </a>
-          <a href="#">Medicamentos</a>
-          <a href="#">Histórico</a>
-          <a href="#">Perfil</a>
+          <Link to="/dashboard" className="text-white font-semibold border-l-4 border-white pl-2 -ml-2.5">
+            Dashboard
+          </Link>
+          <Link to="/novo-medicamento">Medicamento</Link>
+          <Link to="/historico">Histórico</Link>
+          <span className="opacity-50 cursor-not-allowed">Perfil</span>
         </nav>
       </aside>
 

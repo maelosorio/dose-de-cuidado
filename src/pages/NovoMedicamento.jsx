@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function NovoMedicamento() {
   return (
     <div className="min-h-screen flex bg-gray-50">
@@ -6,13 +8,12 @@ function NovoMedicamento() {
       <aside className="w-64 bg-blue-800 text-white flex flex-col p-6">
         <h2 className="text-xl font-bold mb-8">Dose de Cuidado</h2>
         <nav className="flex flex-col gap-4 text-blue-100">
-          <a href="#">Dashboard</a>
-          <a href="#">Agenda</a>
-          <a href="#" className="text-white font-semibold border-l-4 border-white pl-2 -ml-2.5">
-            Medicamentos
-          </a>
-          <a href="#">Histórico</a>
-          <a href="#">Perfil</a>
+          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/novo-medicamento" className="text-white font-semibold border-l-4 border-white pl-2 -ml-2.5">
+            Medicamento
+          </Link>
+          <Link to="/historico">Histórico</Link>
+          <span className="opacity-50 cursor-not-allowed">Perfil</span>
         </nav>
       </aside>
 

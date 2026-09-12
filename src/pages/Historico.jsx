@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import historico from '../data/mockHistorico.json'
 
 function Historico() {
@@ -8,13 +9,12 @@ function Historico() {
       <aside className="w-64 bg-blue-800 text-white flex flex-col p-6">
         <h2 className="text-xl font-bold mb-8">Dose de Cuidado</h2>
         <nav className="flex flex-col gap-4 text-blue-100">
-          <a href="#">Dashboard</a>
-          <a href="#">Agenda</a>
-          <a href="#">Medicamentos</a>
-          <a href="#" className="text-white font-semibold border-l-4 border-white pl-2 -ml-2.5">
+          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/novo-medicamento">Medicamento</Link>
+          <Link to="/historico" className="text-white font-semibold border-l-4 border-white pl-2 -ml-2.5">
             Histórico
-          </a>
-          <a href="#">Perfil</a>
+          </Link>
+          <span className="opacity-50 cursor-not-allowed">Perfil</span>
         </nav>
       </aside>
 
