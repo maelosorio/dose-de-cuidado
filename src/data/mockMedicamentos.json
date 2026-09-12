@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nome": "Losartana",
+    "dose": "50mg",
+    "horario": "08:00",
+    "status": "concluido"
+  },
+  {
+    "id": 2,
+    "nome": "Metformina",
+    "dose": "850mg",
+    "horario": "12:00",
+    "status": "pendente"
+  },
+  {
+    "id": 3,
+    "nome": "Sinvastatina",
+    "dose": "20mg",
+    "horario": "20:00",
+    "status": "pendente"
+  },
+  {
+    "id": 4,
+    "nome": "Paracetamol",
+    "dose": "750mg",
+    "horario": "14:00",
+    "status": "nao_realizado"
+  }
+]
